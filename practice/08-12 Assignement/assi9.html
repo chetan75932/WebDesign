@@ -1,0 +1,45 @@
+<html>
+    <head><title>uppercase</title>
+    <script>
+        function f1(){
+             let upper=document.getElementById("u").checked;
+             let lower=document.getElementById("l").checked;
+             let title=document.getElementById("t").checked;
+             let typed=document.getElementById("t1").value;
+             var str1="";
+             if(upper)
+             {
+                str1= typed.toUpperCase();
+             }
+
+             if(lower)
+             {
+                str1=typed.toLowerCase();
+             }
+             if(title){
+                 let f=typed.charAt(0);
+                 let f1=f.toUpperCase();
+                 let r=typed.substr(1,typed.length);
+                 
+                 str1=f1+r.toLowerCase();
+             }
+             document.getElementById("p1").innerHTML=str1;
+        }
+
+    </script>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter any String" id="t1">
+        </br>
+        <div id="check">
+          Uppercase: <input type="radio" value="uppercase" onclick="f1()" name="q1" id="u">
+          <br>
+          <br>
+          lowercase: <input type="radio" value="lowerCase" onclick="f1()" name="q1" id="l">
+          <br>
+          <br>
+          Titlecase: <input type="radio" value="titleCase" onclick="f1()" name="q1" id="t">
+        </div>
+    <p> Result=<span id="p1"></span></p>
+    </body>
+</html>

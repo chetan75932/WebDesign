@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-submission</title>
+    <script>
+        function f1()
+        {
+            alert("Submitted Successfully")
+        }
+    </script>
+
+    
+</head>
+<body>
+    
+    <form>
+        <fieldset>
+          <legend Align="center"><u>User Details</u></legend>  
+            First Name :  <input type="text" placeholder="Enter your first name">
+        <br>
+        <br>
+            Last Name  : <input type="text" placeholder="Enter your Last name">
+        <br>
+        <br>
+            DOB :<input type="date" placeHolder="Enter Date Of Birth">
+        <br>
+        <br>
+           <h5>Address :</h5> 
+           <textarea rows="5" cols="50" placeholder="Enter address here" maxlength="30"></textarea>
+        <br>
+        <br>
+           <h5>State :</h5>
+           <select>
+            <option>Maharastra</option>
+            <option>Madhya Pradesh</option>
+            <option>Rajasthan</option>
+           </select>
+        <br>
+        <br>
+        <h5>Education :</h5>
+        SSC: <input type="checkbox" >
+        HSC: <input type="checkbox" >
+        Diploma :<input type="checkbox" >
+        UG: <input type="checkbox">
+        PG: <input type="checkbox">
+        <h5>Gender :</h5>
+        Male: <input type="radio" name="G">
+        Female : <input type="radio" name="G">
+        <div  align="center"  >
+             <input style="background-color: rgb(0, 89, 255);" type="button" value="submit" onclick="f1()">
+        </div>
+      </fieldset>
+      
+      
+    </form>
+   
+</body>
+</html>

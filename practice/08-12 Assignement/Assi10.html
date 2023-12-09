@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add,sub,mult,div</title>
+    <script>
+         
+         function calculate(){
+            let num1=document.getElementById("n1").value;
+            let num2=document.getElementById("n2").value;
+            console.log(num1+" "+num2);
+            let op=document.getElementById("operation").value;
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            switch(op){
+                case '+':
+                   document.getElementById("r1").innerHTML =num1+num2;
+                    break;
+                case '-':
+                document.getElementById("r1").innerHTML =num1-num2;
+                    break;
+                case '*':
+                document.getElementById("r1").innerHTML =num1*num2;break;
+                case '/':
+                document.getElementById("r1").innerHTML =num1/num2;break;
+            }
+         }
+    </Script>
+</head>
+<body>
+    <input type="number" placeholder="Select number"  id="n1">
+    <input type="number" placeholder="select number"  id="n2">
+   
+    <select id="operation" onchange="calculate()" >
+        <option>select Option</option>
+        <option >+</option>
+        <option >-</option>
+        <option >*</option>
+        <option >/</option>
+    </select>
+    <p>Result: <span id="r1"></span></p>
+
+</body>
+</html>

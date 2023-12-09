@@ -1,0 +1,77 @@
+<html>
+    <head>
+    </head>
+            <title>Currency Converter</title>
+            <style>
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+            </style>
+
+
+<script>
+
+
+    function currencyCal()
+    {
+        let x=document.getElementById("s").value;
+        let y=document.getElementById("d").value;
+       
+        let result="";
+
+        if(x=="Doller")
+        {
+            
+            if(y=="Rupees")
+            {
+                result=(x+"->"+y+"="+"80ruppes")
+                
+            }
+        }
+        if(x=="Rupees"){
+            if(y=="Doller"){
+                result=`${x+"->"} ${y}=0.012$ `
+            }
+        }
+        document.getElementById("res").innerHTML=result;
+    }
+</script>
+    <body>
+        <fieldset>
+            <legend align="Center" ><u>Currency converter </u></legend>
+        <div>
+            <div class="wrapper">
+            <h3 placeholder="Enter cuurent Currency"><b>Select Current  Currncy : </b></h3>
+            <select  id="s">
+               <option>from</option>
+               <option>Rupees</option>
+               <option>Doller</option>
+               <option>Rubi</option>
+               <option>Pounds</option>
+               <option>Euro</option>
+            </select>
+            <h3>Select Currency Do you Want to Convert :</h3>
+            
+               <select  id="d">
+                <option>to</option>
+                <option>Rupees</option>
+                <option>Doller</option>
+                <option>Rubi</option>
+                <option>Pounds</option>
+                <option>Euro</option>
+                </select>
+            </div>
+        </div>
+        </fieldset>
+        <div align="center">
+            <input type="button" value="submit" onclick="currencyCal()">
+        </div>
+        <div>
+            <h5>Result : <span id="res"></span></h5>
+
+        </div>
+    </body>
+</html>

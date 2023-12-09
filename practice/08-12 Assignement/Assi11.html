@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month</title>
+    <script>
+        function getDetails()
+        {
+            let datee=Date.parse(document.getElementById("d").value);
+            
+
+
+            console.log(datee.getDate())
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+       <label> Date: <input type="date" placeholder="enter date" id="d"></label>
+       <input type="button" value="submit" onclick="getDetails()">
+    </div>
+</body>
+</html>
