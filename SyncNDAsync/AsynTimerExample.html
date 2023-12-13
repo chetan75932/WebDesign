@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    
+    <script>
+    let intervalId
+    let cnt=0;
+    function start()
+    {
+        intervalId=setInterval(()=>{
+            cnt++;
+            document.getElementById("show").innerHTML=`<b>${cnt}</b>`
+        },500)
+    }
+    function stop()
+    {
+    
+        
+        document.getElementById("show").innerHTML=`<b>${cnt}</b>`
+        clearInterval(intervalId)
+        
+    }
+    function restart(){
+        cnt=0;
+        start();
+        
+    }
+</script>
+</head>
+<body>
+    <input type="button" value="start" onclick="start()">
+    <br>
+    <br>
+    <p id="show"></p>
+    <br>
+    <br>
+    <input type="button" value="restart" onclick="restart()">
+    <br>
+    <br>
+    <input type="button" value="stop" onclick="stop()">
+</body>
+</html>
