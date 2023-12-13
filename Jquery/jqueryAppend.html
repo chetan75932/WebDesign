@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $().ready(()=>{
+            let arr=["red","blue","purple"];
+            arr.forEach((ele) => {
+                $("select").append(`<option>${ele}</option>`)
+            })
+
+            $("#data-insrt").change(()=>{
+                let curr=$("#data-insrt").val();
+                arr.push(curr);
+                $("select").html("");
+                arr.sort().forEach((ele)=>{
+                    $("select").append(`<option>${ele}</option>`)
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="text" id="data-insrt">
+    <select></select>
+</body>
+</html>
