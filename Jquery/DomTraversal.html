@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Traversal</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $().ready(()=>{
+            console.log($("div").parent())
+
+            $("div").children().each((i,ele)=>{
+                console.log(i,ele)
+            })
+            $("div").children().first().css({backgroundColor:"red",borderColor:"green",borderWidth:"5px"})
+        })
+    </script>
+</head>
+<body>
+    <div class="first-div" width="400px" height="400px">
+        <p class="first-child">
+        <span>
+        span 1<span>
+        span 2<span>
+        span 3</span>
+        </span>
+        </span>
+        </p>
+
+        <h1 class="second-child">
+            p2
+        </h1>
+    </div>
+</body>
+</html>

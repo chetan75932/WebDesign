@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax+html</title>
+    <script>
+        function f1()
+        {
+            let http=new XMLHttpRequest();
+
+            http.onload=function(){
+                console.log(http.responseText);
+                let obj=JSON.parse(http.responseText);
+                console.log(obj.data.first_name,obj.data.avatar,obj.data.last_name)
+                document.getElementById("p1").innerHTML=obj.data.first_name;
+                document.getElementById("i1").innerHTML=`<img src="${obj.data.avatar}" width="300px" height="300px" alt="not found"/>`
+
+
+            }
+            let id=document.getElementById("id-1").value;
+            http.open("GET",`https://reqres.in/api/users/${id}`);
+            http.send();
+        }
+    </script>
+</head>
+<body>
+    text:<input type="number" placeholder="enter id" id="id-1"/>
+    <p id="p1"></p>
+    <div id="i1" ></div>
+    <button onclick="f1()">Submit</button>
+</body>
+</html>
