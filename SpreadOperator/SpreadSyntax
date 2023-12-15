@@ -1,0 +1,21 @@
+//IMP FOR MCQS
+
+
+let obj={
+    Song :"Fir kabhi",
+    Hero : "Anil kapoor",
+    Album :{
+        Movie :"Tu hi re",
+        Year : 2050
+    }, 
+    Hroine :"Kajal Agarval"
+}
+
+//this will just Create 2 references pointing  to same.
+let obj1=obj;
+console.log(obj.Song,obj1.Song)
+
+//spread operator
+let obj2={...obj};
+obj.Song="mila tu muze"
+console.log(obj.Song,obj2.Song)//O/P-->mila tu muze, Fir kabhi

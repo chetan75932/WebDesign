@@ -1,0 +1,12 @@
+//IMP FOR MCQS
+
+let obj={name:"chetan",roll:"Admid",id:1};
+let a1=obj.name;
+let b1=obj.roll;
+console.log(a1,b1)
+
+let {name,roll}=obj
+//alis of obj
+let {name:a,roll:b}=obj
+
+console.log(a,b)
