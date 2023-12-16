@@ -1,0 +1,8 @@
+.text-color{
+    color:red;
+    border: 4px dotted pink;
+    text-align: center;
+    background-color: yellow;
+    width: 150px;
+    height: 50px;
+}
